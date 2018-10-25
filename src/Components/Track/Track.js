@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Track.css ';
+import './Track.css';
 
 class Track extends React.Component {
   constructor(props){
@@ -27,7 +27,7 @@ addTrack(event){
   this.props.onAdd(this.props.track);
 }
 
-removeTrack(){
+removeTrack(event){
 this.props.onRemove(this.props.track);
 }
 
@@ -45,8 +45,8 @@ this.props.onRemove(this.props.track);
 
         </div>
 
-        <a className="Track-action">< + onClick={this.addTrack} - onClick={this.removalTrack}></a>
-
+        <a className="Track-action" onClick={this.romoveTrack}>-</a>
+       <a className="Track-action" onClick={this.addTrack}>+</a>
       </div>
 
      )

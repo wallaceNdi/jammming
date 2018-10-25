@@ -3,6 +3,7 @@ import './App.css';
 import SearchResults from '../SearchResults/SearchResults';
 import SearchBar from '../SearchBar/SearchBar';
 import Playlist from '../Playlist/Playlist';
+import Spotify from '../../util/Spotify.js';
 
 class App extends Component {
 constructor(props){
@@ -77,7 +78,7 @@ Spotify.savePlaylist(this.state.playlistName, trackUris).then(() =>
   }
 
   search(searchTerm){
-  this.setState(  console.log(searcTerm));
+  this.setState(  console.log(searchTerm));
   }
 
 

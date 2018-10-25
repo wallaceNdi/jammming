@@ -39,9 +39,9 @@ this.props.onRemove(this.props.track);
 
         <div className="Track-information">
 
-          <h3>{this.props.track.name}</h3>
+          <h3>{this.props.tracks.name}</h3>
 
-          <p>{this.props.track.artist} | {this.props.track.album} </p>
+          <p>{this.props.tracks.artist} | {this.props.tracks.album} </p>
 
         </div>
 

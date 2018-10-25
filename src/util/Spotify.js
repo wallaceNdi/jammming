@@ -1,5 +1,5 @@
-const clientID = '7fcbf9e914b945b9a5b966a50b8d0c51';
-
+const clientId = '7fcbf9e914b945b9a5b966a50b8d0c51';
+const redirectUri = 'http://localhost:3000/';
 let accessToken;
 const Spotify = {
   getAccessToken() {
@@ -30,27 +30,28 @@ if (accessTokenMatch && expiresInMatch) {
   return fetch(`https://api.spotify.com/v1/search?type
   track&q=${term}`, {
   headers: {
-  Authorization: Bearer ${accessToken}
+  Authorization: `Bearer ${accessToken}`
   }
   }).then(response => {
   return response.json();
   })
   .then(myJson => {
-      if(!myjson.tracks) {
+      if(!myJson.tracks) {
           return [];
       }
-      return myjson.tracks.items.map (track => ({
+      return myJson.tracks.items.map (track => ({
           id:track.id,
           name:track.name,
           artist:track.artist[0].name,
           album:track.album.name,
           uri:track.uri
       }));
-  });
+  })
+},
   savePlaylist(playlistName,[trackUris]){
 if (playlistName && trackUris){
   return;
+   }
+ }
 }
-  }
-
 export default Spotify;

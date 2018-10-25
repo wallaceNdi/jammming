@@ -12,9 +12,9 @@ render() {
     return (
   <div className="TrackList">
           {
-            this.props.tracks.map(track => {
-             return <Track track=
-             {track} onAdd=
+            this.props.tracks.map(tracks => {
+             return <Track tracks=
+             {tracks} onAdd=
              {this.props.onAdd}
              onRemove=
              {this.props.onRemove}

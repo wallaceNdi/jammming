@@ -54,4 +54,12 @@ if (playlistName && trackUris){
    }
  }
 }
+
+const accessToken = accessToken;
+const headers = {"access_token": "NgCXRKc...MzYjw",
+   "token_type": "bearer",
+   "expires_in": 3600,};
+let userId = ''
+
+
 export default Spotify;

@@ -77,9 +77,11 @@ Spotify.savePlaylist(this.state.playlistName, trackUris).then(() =>
   });
   }
 
-  search(searchTerm){
-  this.setState(  console.log(searchTerm));
-  }
+  search(term) {
+      Spotify.search(term).then(searchResults => {
+        this.setState({searchResults: searchResults});
+      });
+    }
 
 
   render(){

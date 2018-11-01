@@ -1,5 +1,5 @@
 const clientID = '7fcbf9e914b945b9a5b966a50b8d0c51';
-const redirectURI = 'http://localhost:3000/';
+const redirectURI = 'SOLO_MUSIC.surge.sh';
 
 let accessToken, expiresIn;
 
